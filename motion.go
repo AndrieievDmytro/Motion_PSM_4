@@ -107,52 +107,6 @@ func midPointBall() {
 	csvExport(energy, "energyBall.csv")
 }
 
-// func midPointBall() {
-// 	data := [][]string{}
-// 	data_linear := [][]string{}
-// 	posX := 0.0
-// 	posY := radius
-// 	velocity := 0.0
-// 	inertiaBall := 2.0 / 5.0 * mass * math.Pow(radius, 2)
-// 	accelerationBall := gVal * math.Sin(alfa) / (1.0 + inertiaBall/(mass*radius*radius))
-// 	epsilon := accelerationBall / radius
-// 	beta := 0.0
-// 	omega := 0.0
-// 	var deltaPosX float64
-// 	var deltaVelocity float64
-
-// 	for posX <= stopCondition() {
-
-// 		posX += deltaPosX
-// 		velocity += deltaVelocity
-
-// 		massCenterX := posX*math.Cos(-alfa) - posY*math.Sin(-alfa)
-// 		massCenterY := posX*math.Sin(-alfa) + posY*math.Cos(-alfa) + hight
-
-// 		circleX := radius*math.Sin(beta) + massCenterX
-// 		circleY := radius*math.Cos(beta) + massCenterY
-
-// 		velocity_2 := velocity + accelerationBall*deltaT/2
-
-// 		deltaPosX = velocity_2 * deltaT
-// 		deltaVelocity = accelerationBall * deltaT
-
-// 		deltaBeta := omega * deltaT
-// 		deltaOmega := epsilon * deltaT
-
-// 		beta += deltaBeta
-// 		omega += deltaOmega
-
-// 		data = append(data, convertToStringArray(circleX, circleY))
-// 		data_linear = append(data_linear, convertToStringArray(massCenterX, massCenterY))
-
-// 		// fmt.Println("Position X:", beta, "Position Y:", omega)
-// 		// fmt.Println("circleX:", circleX, "circleY:", circleY)
-// 	}
-// 	csvExport(data, "angleMidPointBall.csv")
-// 	csvExport(data_linear, "linearMidPointBall.csv")
-// }
-
 func midPointSphere() {
 	data := [][]string{}
 	data_linear := [][]string{}
